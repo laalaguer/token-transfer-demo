@@ -39,7 +39,7 @@ const evmToHuman = function (aBigNumber, decimals = 18) {
  * @param {Number} decimals Percisions that EVM number has. Default is 18.
  * @returns {String} String represented number.
  */
-const humanToEvm = function (aNumber, decimals = 18) {
+const humanToEVM = function (aNumber, decimals = 18) {
   const a = makeBN(aNumber)
   return a.multipliedBy(DECIMALS(decimals)).toString(10)
 }
@@ -60,6 +60,6 @@ export {
   makeBN,
   printBN,
   evmToHuman,
-  humanToEvm,
+  humanToEVM,
   evmToPrintable
 }

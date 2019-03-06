@@ -56,7 +56,7 @@ export default {
         })
     },
     transfer () { // Confrim and send out a transfer.
-      const evmAmount = utils.humanToEvm(this.toamount.toString(), 18)
+      const evmAmount = utils.humanToEVM(this.toamount.toString(), 18)
       operations.transferToken(this.contract, this.myaddress, this.toaddress, evmAmount, this.toamount, 'VTHO')
         .then(result => {alert('success!')})
         .catch(e => {alert('failed!')})
